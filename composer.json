@@ -1,5 +1,5 @@
 {
-    "name": "2amigos/yii2-ckeditor-widget",
+    "name": "mykolakrykunov/yii2-ckeditor-widget",
     "description": "CKEditor widget for Yii2.",
     "type": "yii2-extension",
     "keywords": [
@@ -22,8 +22,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/2amigos/yii2-ckeditor-widget/issues",
-        "source": "https://github.com/2amigos/yii2-ckeditor-widget"
+        "issues": "https://github.com/mykolakrykunov/yii2-ckeditor-widget/issues",
+        "source": "https://github.com/mykolakrykunov/yii2-ckeditor-widget"
     },
     "require": {
         "yiisoft/yii2": "~2.0.0"
