@@ -53,10 +53,15 @@
 				},
 
 				onUploaded: function( upload ) {
+					// Width and height could be returned by server (#13519).
+					var $img = this.parts.img.$,
+						width = upload.responseData.width || $img.naturalWidth,
+						height = upload.responseData.height || $img.naturalHeight;
+
 					// Set width and height to prevent blinking.
 					this.replaceWith( '<img src="' + upload.url + '" ' +
-						'width="' + this.parts.img.$.naturalWidth + '" ' +
-						'height="' + this.parts.img.$.naturalHeight + '">' );
+						'width="' + width + '" ' +
+						'height="' + height + '">' );
 				}
 			} );
 
@@ -108,7 +113,7 @@
 	// Black rectangle which is shown before image is loaded.
 	var loadingImage = 'data:image/gif;base64,R0lGODlhDgAOAIAAAAAAAP///yH5BAAAAAAALAAAAAAOAA4AAAIMhI+py+0Po5y02qsKADs=';
 	// jscs:enable maximumLineLength
-
+	CKEDITOR.config.imageUploadUrl = '/admin/page/uploader';
 	/**
 	 * The URL where images should be uploaded.
 	 *
